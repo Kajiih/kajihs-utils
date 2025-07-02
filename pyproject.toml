@@ -219,7 +219,7 @@ md_report_exclude_outcomes = ["passed", "xfailed", "skipped"]
 plugins = [
     "covdefaults", # https://github.com/asottile/covdefaults
 ]
-omit = ["tools/*"]
+omit = ["tools/*", "src/kajihs_utils/experimental/*"]
 
 [tool.coverage.report]
 fail_under = 80
