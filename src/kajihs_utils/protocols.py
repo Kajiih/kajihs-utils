@@ -7,41 +7,6 @@ from typing import (
     runtime_checkable,
 )
 
-from typing_extensions import deprecated  # TODO: Replace with typing when support for 3.12 drops
-
-
-@deprecated("Use SupportsDunder[...] versions")
-@runtime_checkable
-class SupportsLessThan[T](Protocol):
-    """Objects supporting less-than comparisons."""
-
-    def __lt__(self, /, other: T) -> bool: ...
-
-
-@deprecated("Use SupportsDunder[...] versions")
-@runtime_checkable
-class SupportsLessOrEqual[T](Protocol):
-    """Objects supporting less-or-equal comparisons."""
-
-    def __lt__(self, /, other: T) -> bool: ...
-
-
-@deprecated("Use SupportsDunder[...] versions")
-@runtime_checkable
-class SupportsGreaterThan[T](Protocol):
-    """Objects supporting greater-than comparisons."""
-
-    def __lt__(self, /, other: T) -> bool: ...
-
-
-@deprecated("Use SupportsDunder[...] versions")
-@runtime_checkable
-class SupportsGreaterOrEqual[T](Protocol):
-    """Objects supporting greater-or-equal comparisons."""
-
-    def __lt__(self, /, other: T) -> bool: ...
-
-
 _T_contra = TypeVar("_T_contra", contravariant=True)
 
 # Comparison protocols
