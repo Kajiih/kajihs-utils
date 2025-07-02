@@ -1,7 +1,7 @@
 """kajihs-utils metadata."""
 
 __module_name__ = "kajihs_utils"  # Not dynamic
-__version__ = "0.10.1"
+__version__ = "0.10.2"
 
 __authors__ = ["Julian Paquerot"]
 __author_emails__ = ["itskajih@gmail.com"]
