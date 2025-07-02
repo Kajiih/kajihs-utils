@@ -21,7 +21,8 @@ license-files = ["LICENSE*"]
 
 # List of classifiers: https://pypi.org/classifiers/
 classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Intended Audience :: Developers",
     "Natural Language :: English",
@@ -30,10 +31,18 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
-    "Typing :: Typed"
+    "Typing :: Typed",
 ]
 
 dependencies = []
+
+    [project.optional-dependencies]
+    jax = ["jax>=0.4.36"]
+    loguru = ["loguru>=0.7.3", "rich>=13.9.4"]
+    pyplot = ["matplotlib>=3.10.0"]
+    numpy = ["numpy>=2.2.0"]
+    whenever = ["whenever>=0.7.3"]
+
 
 [dependency-groups]
 dev = [
@@ -124,6 +133,7 @@ extend-include = ["*.ipynb"]
         "E111",   # indentation-with-invalid-multiple
         "E114",   # indentation-with-invalid-multiple-comment
         "E117",   # over-indented
+        "E501",
         "D206",   # docstring-tab-indentation
         "D300",   # triple-single-quotes
         "Q000",   # bad-quotes-inline-string
@@ -148,7 +158,7 @@ extend-include = ["*.ipynb"]
         "TD004",  # Missing colon after TODO
         "FIX002",
         # --- Trying out ---
-        # "D105",   # Missing docstring in magic method
+        "D105", # Missing docstring in magic method
         # "D107",   # Missing docstring in `__init__`
         # "ANN401", # Dynamically typed expressions (typing.Any) are disallowed in
         # "RET504", # Unnecessary assignment to `...` before `return` statement
@@ -218,12 +228,12 @@ fail_under = 80
 [tool.codespell]
 write-changes = true
 check-filenames = true
+ignore-words-list = "fro"
 
 [tool.markdownlint]
 first-line-h1 = false
 no-inline-html = false
 line-length = false
-
 
 
 [tool.commitizen]

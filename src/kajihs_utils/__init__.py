@@ -1,22 +1,5 @@
-"""
-Totally typed, plausibly practical, and remarkably random utilities—for me, and maybe for you too.
+"""Totally typed, plausibly practical, and remarkably random utilities—for me, and maybe for you too."""
 
-Module attributes/global variables have to be defined where they are exported.
+from kajihs_utils.core import bisect_predicate, get_first, is_sorted
 
-Attributes:
-    GLOBAL_VAL: Some description
-"""
-
-from kajihs_utils.some_module import (
-    GLOBAL_VAR,
-    SomeClass,
-    SomeDataClass,
-    public_function,
-)
-
-__all__ = [
-    "GLOBAL_VAR",
-    "SomeClass",
-    "SomeDataClass",
-    "public_function",
-]
+__all__ = ["bisect_predicate", "get_first", "is_sorted"]
