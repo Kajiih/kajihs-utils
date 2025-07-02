@@ -75,6 +75,7 @@ plugins:
             merge_init_into_class: true
             docstring_options:
               ignore_init_summary: true
+            show_submodules: true
             show_if_no_docstring: true
             separate_signature: false
             show_overloads: true
