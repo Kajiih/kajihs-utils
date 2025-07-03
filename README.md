@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/actions/workflow/status/Kajiih/kajihs-utils/ci.yaml?branch=main&label=CI&logo=github&style=for-the-badge" alt="CI">
 </a>
 <a href="https://github.com/Kajiih/kajihs-utils/actions/workflows/publish.yaml" target="_blank">
-    <img src="https://img.shields.io/github/actions/workflow/status/Kajiih/kajihs-utils/publish.yaml?branch=main&label=Publish&logo=github&style=for-the-badge" alt="Publish">
+    <img src="https://img.shields.io/github/actions/workflow/status/Kajiih/kajihs-utils/publish.yaml?label=Publish&logo=github&style=for-the-badge" alt="Publish">
 </a>
 <a href="https://codecov.io/github/Kajiih/kajihs-utils" target="_blank">
     <img src="https://img.shields.io/codecov/c/github/Kajiih/kajihs-utils?logo=codecov&style=for-the-badge" alt="Coverage">
