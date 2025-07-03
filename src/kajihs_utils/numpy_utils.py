@@ -8,7 +8,7 @@ import numpy as np
 from numpy import dtype, float64, floating, int_, ndarray
 
 if TYPE_CHECKING:
-    from collections.abc import Iterable
+    from collections.abc import Callable, Iterable
 
     from numpy.typing import ArrayLike, NDArray
 
@@ -19,9 +19,9 @@ type AnyFloat = float | float64
 class IncompatibleShapeError(ValueError):
     """Shapes of input arrays are incompatible for a given function."""
 
-    def __init__(self, arr1: NDArray[Any], arr2: NDArray[Any], obj: Any) -> None:
+    def __init__(self, arr1: NDArray[Any], arr2: NDArray[Any], fun: Callable[..., Any]) -> None:
         super().__init__(
-            f"Shapes of inputs arrays {arr1.shape} and {arr2.shape} are incompatible for {obj.__name__}"
+            f"Shapes of inputs arrays {arr1.shape} and {arr2.shape} are incompatible for {fun.__name__}"
         )
 
 
