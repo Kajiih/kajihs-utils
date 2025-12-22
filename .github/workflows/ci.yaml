@@ -27,12 +27,12 @@ jobs:
 
     steps:
       - name: 🛎️ Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           persist-credentials: false
 
       - name: 🐍 Install uv
-        uses: astral-sh/setup-uv@445689ea25e0de0a23313031f5fe577c74ae45a1 # v6.3.0
+        uses: astral-sh/setup-uv@681c641aba71e4a1c380be3ab5e12ad51f415867 # v7.1.6
         with:
           python-version: ${{ matrix.python-version }}
           activate-environment: true
@@ -53,7 +53,7 @@ jobs:
       # TRACK: https://github.com/codecov/test-results-action/issues/126
       - name: 📊 Upload test results to Codecov
         if: ${{ !cancelled() }}
-        uses: codecov/test-results-action@47f89e9acb64b76debcd5ea40642d25a4adced9f # v1.1.1
+        uses: codecov/test-results-action@0fa95f0e1eeaafde2c782583b36b28ad0d8c77d3 # v1.2.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
@@ -71,7 +71,7 @@ jobs:
           fi
 
       - name: 📊 Upload coverage to Codecov
-        uses: codecov/codecov-action@78f372e97e6e2f82dc51b004c5fb646501ee30ae # 5.4.3
+        uses: codecov/codecov-action@671740ac38dd9b0130fbe1cec585b89eea48d3de # 5.4.3
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
@@ -81,12 +81,12 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: 🛎️ Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           persist-credentials: false
 
       - name: 🐍 Install uv
-        uses: astral-sh/setup-uv@445689ea25e0de0a23313031f5fe577c74ae45a1 # v6.3.0
+        uses: astral-sh/setup-uv@681c641aba71e4a1c380be3ab5e12ad51f415867 # v7.1.6
         with:
           python-version: 3.12
           activate-environment: true
@@ -95,7 +95,7 @@ jobs:
         run: uv sync --all-extras --dev
 
       - name: 🔍 Lint check
-        uses: astral-sh/ruff-action@52ac3ada9192d41bb1392abe849d80225b53c1ee # 3.4.0
+        uses: astral-sh/ruff-action@eacaa6bf715545a3dcbc6489cfb8f91b0b40deff # 3.4.0
         with:
           args: check --output-format github
 
